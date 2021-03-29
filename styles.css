@@ -1,0 +1,13 @@
+body {
+    display: grid;
+    max-width: 960px;
+    margin: 0 auto;
+    justify-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div img{
+    height: 100px;
+    width:100px;
+    padding: 25px;
+}

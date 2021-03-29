@@ -1,10 +1,6 @@
-function getIconId(iconId){
-    //for all images, run when clicked
-    //when image is clicked get Id and use that for searchKey and run fetchGiphy
-    //highlight current icon, add border? 
-
-}
-
+//use img id as seachKey
+//run when img is clicked
+//fetch request to search Giphy and return gif
 function fetchGiphy(searchKey) {
     let apiKey = 'hlXLDsw1pDI6sCcc7fW4cFEMRmw1jx5Q';
     let searchPhrase = `sign+with+robert+${searchKey}`;
@@ -16,15 +12,12 @@ function fetchGiphy(searchKey) {
         })
         .then(json => {
             let responseGif = json.data[0].images.original.url
-            // console.log(responseGif);
             addGifToPage(responseGif);
         })
         .catch(err => console.log(err));
 }
 
 function addGifToPage(gifURL){
-    //1 gif at a time on page 
-    //embed URL in gif div 
     document.querySelector('#gif1').src= gifURL;
 }
 
